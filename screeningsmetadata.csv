@@ -1,0 +1,8 @@
+Name,Title__c,Icon_Name__c,Order__c,Active__c,Icon_Size__c
+Instructions,Instructions,custom:custom18,1,true,medium
+Admin,Admin,standard:user,2,true,medium
+Moral,Moral,custom:custom90,3,true,medium
+Medical,Medical,custom:custom58,4,true,medium
+Aptitude,Aptitude,standard:skill_entity,5,true,medium
+Prior Service,Prior Service,custom:custom91,6,true,medium
+Family Associates,Family & Associates,standard:groups,7,true,medium

@@ -1,0 +1,72 @@
+<template>
+    <div class="slds-box slds-theme_default">
+        <template if:true={mapData}>
+            <div class="slds-grid slds-wrap slds-gutters_x-small">
+                <template for:each={mapData} for:item="keyValue">
+                    <div key={keyValue.key} class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4 slds-large-size_1-of-7 slds-var-p-around_small">
+                        <template if:true={keyValue.value.isInstruction}>
+                            <div class="tiles notStartedIcon">
+                                <lightning-icon 
+                                key={keyValue.key}
+                                icon-name={keyValue.value.iconName} 
+                                title={keyValue.value.title}
+                                size={keyValue.value.iconSize}
+                                onclick={handleClick}
+                                ></lightning-icon>
+                                <div class="iconText">{keyValue.value.title}</div>
+                            </div>
+                        </template>
+                        <template if:true={keyValue.value.isDisabled}>
+                            <div class="tiles disabledIcon">
+                                <lightning-icon 
+                                key={keyValue.key}
+                                icon-name={keyValue.value.iconName} 
+                                title={keyValue.value.title}
+                                size={keyValue.value.iconSize}
+                                onclick={handleClick}
+                                ></lightning-icon>
+                                <div class="iconText">{keyValue.value.title}</div>
+                            </div>
+                        </template>
+                        <template if:true={keyValue.value.isNotStarted}>
+                            <div class="tiles notStartedIcon">
+                                <lightning-icon 
+                                key={keyValue.key}
+                                icon-name={keyValue.value.iconName} 
+                                title={keyValue.value.title}
+                                size={keyValue.value.iconSize}
+                                onclick={handleClick}
+                                ></lightning-icon>
+                                <div class="iconText">{keyValue.value.title}</div>
+                            </div>
+                        </template>
+                        <template if:true={keyValue.value.isInProgress}>
+                            <div class="tiles inProgressIcon">
+                                <lightning-icon 
+                                key={keyValue.key}
+                                icon-name={keyValue.value.iconName} 
+                                title={keyValue.value.title}
+                                size={keyValue.value.iconSize}
+                                onclick={handleClick}
+                                ></lightning-icon>
+                                <div class="iconText">{keyValue.value.title}</div>
+                            </div>
+                        </template>
+                        <template if:true={keyValue.value.isComplete}>
+                            <div class="tiles completeIcon">
+                                <lightning-icon 
+                                key={keyValue.key}
+                                icon-name={keyValue.value.iconName} 
+                                title={keyValue.value.title}
+                                size={keyValue.value.iconSize}
+                                onclick={handleClick}
+                                ></lightning-icon>
+                                <div class="iconText">{keyValue.value.title}</div>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+            </div>
+        </template>
+    </div>
+</template>
